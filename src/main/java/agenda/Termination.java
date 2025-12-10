@@ -6,14 +6,17 @@ import java.time.temporal.Temporal;
 
 public class Termination {
 
+    private LocalDate myStart;
+    private ChronoUnit myFrequency;
+    private LocalDate myTerminationInclusive;
+    private long myNumberOfOccurrences;
+
     public LocalDate terminationDateInclusive() {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        return myTerminationInclusive;
     }
 
     public long numberOfOccurrences() {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        return myNumberOfOccurrences;
     }
 
 
@@ -30,8 +33,10 @@ public class Termination {
      * @see ChronoUnit#between(Temporal, Temporal)
      */
     public Termination(LocalDate start, ChronoUnit frequency, LocalDate terminationInclusive) {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        this.myStart = start;
+        this.myFrequency = frequency;
+        this.myTerminationInclusive = terminationInclusive;
+        this.myNumberOfOccurrences = frequency.between(start, terminationInclusive) + 1;
     }
 
     /**
@@ -46,8 +51,10 @@ public class Termination {
      * @param numberOfOccurrences the number of occurrences of this repetitive event
      */
     public Termination(LocalDate start, ChronoUnit frequency, long numberOfOccurrences) {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        this.myStart = start;
+        this.myFrequency = frequency;
+        this.myNumberOfOccurrences = numberOfOccurrences;
+        this.myTerminationInclusive = start.plus(numberOfOccurrences - 1, frequency);
     }
 
 }

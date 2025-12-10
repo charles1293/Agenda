@@ -1,2 +1,26 @@
-Ecrire ici votre réponse à la question UML.
+1. Premier Diagramme : Modele pluq complexe
 
+Avantages :
+
+    - Il gère efficacement les événements simples et répétitifs, incluant des options avancées comme les exceptions de récurrence ou les dates de fin précises.
+
+    - Il permet de modéliser des cas très précis, tels que des répétitions limitées à un nombre d'occurrences ou des exclusions spécifiques pour certains jours.
+
+Inconvénients :
+
+    - Sa mise en œuvre est lourde et demande un effort important, même pour des besoins initialement simples.
+
+
+2. Deuxième Diagramme : Modele plus simple
+
+Avantages :
+
+    - Avec un nombre réduit de classes et de relations, il est plus simple à comprendre et à manipuler.
+
+    - Il est parfaitement adapté lorsque les événements se répètent selon des schémas simples et fréquents.
+
+    - Moins de détails à spécifier = développement plus rapide.
+
+Inconvénients :
+
+    - Il gère mal les événements complexes, notamment ceux nécessitant des exceptions précises ou une gestion fine des dates de fin.
